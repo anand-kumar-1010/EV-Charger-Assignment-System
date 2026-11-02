@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Smart Assignment | EV Charge</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts for modern typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    
+    <style>
+        :root {
+            --glass-bg: rgba(15, 23, 42, 0.45);
+            --glass-border: rgba(255, 255, 255, 0.25);
+            --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Outfit', sans-serif;
+            color: #ffffff;
+            /* Animated multi-color gradient background */
+            background: linear-gradient(-45deg, #0f172a, #1e1b4b, #2e1065, #0284c7);
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
+            min-height: 100vh;
+        }
+
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* Glassmorphism Sidebar */
+        .sidebar {
+            background: rgba(15, 23, 42, 0.65);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border-right: 1px solid var(--glass-border);
+            width: 280px;
+            box-shadow: var(--glass-shadow);
+            z-index: 10;
+        }
+
+        /* Fixed Title Styling */
+        .sidebar h4 {
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #00ffcc !important;
+            background: transparent !important;
+            text-shadow: 0px 2px 12px rgba(0, 255, 204, 0.6);
+            display: block !important;
+        }
+
+        /* Navigation Links */
+        .nav-link {
+            color: rgba(255, 255, 255, 0.85);
+            font-weight: 600;
+            padding: 12px 20px;
+            border-radius: 12px;
+            transition: all 0.3s ease;
+        }
+
+        .nav-link:hover, .nav-link.active {
+            color: #ffffff;
+            background: rgba(255, 255, 255, 0.15);
+            transform: translateX(6px);
+            box-shadow: 0 4px 15px rgba(0, 255, 204, 0.2);
+            border-left: 4px solid #00ffcc;
+        }
+
+        /* Glassmorphism Content Cards */
+        .content-card {
+            background: var(--glass-bg);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid var(--glass-border);
+            border-radius: 24px;
+            padding: 2.5rem;
+            box-shadow: var(--glass-shadow);
+        }
+
+        /* Form Controls & Select */
+        .form-select, .form-control {
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid var(--glass-border);
+            color: #ffffff;
+            border-radius: 12px;
+            padding: 12px 16px;
+            transition: all 0.3s ease;
+        }
+
+        .form-select:focus, .form-control:focus {
+            background: rgba(15, 23, 42, 0.9);
+            border-color: #00ffcc;
+            box-shadow: 0 0 15px rgba(0, 255, 204, 0.4);
+            color: #ffffff;
+        }
+
+        .form-select option {
+            background-color: #0f172a;
+            color: #ffffff;
+        }
+
+        /* Vibrant Action Button */
+        .btn-vibrant {
+            background: linear-gradient(90deg, #ec4899, #8b5cf6, #06b6d4);
+            border: none;
+            color: #ffffff;
+            padding: 12px 28px;
+            font-weight: 800;
+            border-radius: 50px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            box-shadow: 0 10px 25px rgba(139, 92, 246, 0.5);
+            transition: all 0.3s ease;
+        }
+
+        .btn-vibrant:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 15px 35px rgba(6, 182, 212, 0.7);
+            color: #ffffff;
+        }
+
+        .btn-vibrant:disabled {
+            background: rgba(255, 255, 255, 0.2);
+            box-shadow: none;
+            color: rgba(255, 255, 255, 0.4);
+        }
+
+        /* Table Glassmorphism Styling */
+        .table {
+            color: #ffffff;
+            --bs-table-bg: transparent;
+            --bs-table-color: #ffffff;
+            border-color: rgba(255, 255, 255, 0.15);
+        }
+
+        .table thead tr {
+            background: rgba(255, 255, 255, 0.12);
+        }
+
+        .table thead th {
+            color: #00ffcc;
+            font-weight: 700;
+            border-bottom: 2px solid var(--glass-border);
+            padding: 1rem;
+            background: transparent;
+        }
+
+        .table tbody td {
+            padding: 1rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .table-hover tbody tr:hover {
+            background: rgba(255, 255, 255, 0.08);
+            color: #ffffff;
+        }
+
+        .table-responsive {
+            border-radius: 16px;
+            overflow: hidden;
+            border: 1px solid var(--glass-border);
+        }
+
+        /* Glass Alerts */
+        .alert {
+            background: rgba(15, 23, 42, 0.6);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 16px;
+            color: #ffffff;
+        }
+
+        .alert-info { border-left: 5px solid #00ffcc; }
+        .alert-success { border-left: 5px solid #10b981; background: rgba(16, 185, 129, 0.15); }
+        .alert-warning { border-left: 5px solid #f59e0b; background: rgba(245, 158, 11, 0.15); }
+
+        /* Custom Badges */
+        .badge-rank-1 {
+            background: rgba(0, 255, 204, 0.2);
+            border: 1px solid #00ffcc;
+            color: #00ffcc;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-weight: 700;
+        }
+
+        .badge-rank-other {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: rgba(255, 255, 255, 0.8);
+            padding: 6px 12px;
+            border-radius: 20px;
+        }
+
+        .badge-model {
+            background: rgba(139, 92, 246, 0.25);
+            border: 1px solid #8b5cf6;
+            color: #c084fc;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-weight: 600;
+        }
+
+        /* Number List Styling */
+        ol li {
+            margin-bottom: 0.8rem;
+            padding-left: 0.5rem;
+            color: rgba(255, 255, 255, 0.85);
+        }
+
+        ol li::marker {
+            color: #00ffcc;
+            font-weight: 800;
+        }
+
+        .text-muted { color: rgba(255, 255, 255, 0.75) !important; }
+        h2 { font-weight: 800; font-size: 2.8rem; text-shadow: 0 4px 15px rgba(0,0,0,0.4); }
+    </style>
+</head>
+
+<body>
+<div class="d-flex min-vh-100">
+
+    <!-- Sidebar -->
+    <aside class="sidebar p-4 d-flex flex-column">
+        <h4 class="mb-5 text-center mt-3">⚡ EV Charge</h4>
+        <nav class="nav flex-column gap-3">
+            <a class="nav-link" href="{% url 'assignment:dashboard' %}">✨ Dashboard</a>
+            <a class="nav-link" href="{% url 'assignment:work_orders' %}">📋 Work Orders</a>
+            <a class="nav-link" href="{% url 'assignment:teams' %}">👥 Team Management</a>
+            <a class="nav-link active" href="{% url 'assignment:smart_assignment' %}">🧠 Smart Assignment</a>
+            <a class="nav-link" href="{% url 'assignment:reports' %}">📊 Reports</a>
+        </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="flex-grow-1 p-4 p-md-5">
+
+        <div class="mb-4">
+            <h2>Smart Team Assignment</h2>
+            <p class="text-muted fs-5">
+                Find the most suitable installation team using compatibility, availability, workload, distance, experience, and ML-based duration prediction.
+            </p>
+        </div>
+
+        <!-- Work Order Selection -->
+        <div class="content-card">
+            <h4 class="mb-3 fw-bold">Select Work Order</h4>
+
+            {% if current_upload_name %}
+                <p class="text-muted mb-3">
+                    Uploaded file: <strong class="text-white">{{ current_upload_name }}</strong>
+                </p>
+            {% endif %}
+
+            <form method="post" action="{% url 'assignment:smart_assignment' %}">
+                {% csrf_token %}
+
+                <label for="work_order" class="form-label fw-bold mb-2">
+                    Available Work Orders
+                </label>
+
+                <select class="form-select mb-4" id="work_order" name="work_order" required>
+                    <option value="">Choose a work order</option>
+
+                    {% for order in orders %}
+                        <option value="{{ order.work_order_number }}"
+                            {% if selected_order and selected_order.work_order_number == order.work_order_number %}
+                                selected
+                            {% endif %}>
+                            {{ order.work_order_number }} — {{ order.charger_type }} — {{ order.customer_address }}
+                        </option>
+                    {% empty %}
+                        <option value="" disabled>No work orders uploaded</option>
+                    {% endfor %}
+                </select>
+
+                <button type="submit" class="btn btn-vibrant" {% if not orders %}disabled{% endif %}>
+                    ⚡ Find Best Team
+                </button>
+            </form>
+        </div>
+
+        <!-- Error Message -->
+        {% if error %}
+        <div class="alert alert-warning mt-4 p-4">
+            <strong class="fs-5">Notice:</strong> {{ error }}
+        </div>
+        {% endif %}
+
+        <!-- Selected Work Order Details -->
+        {% if selected_order %}
+        <div class="content-card mt-4">
+            <h4 class="mb-4 fw-bold">Selected Work Order Details</h4>
+
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <p class="text-muted mb-1">Work Order Number</p>
+                    <h5 style="color: #00ffcc;" class="fw-bold">{{ selected_order.work_order_number }}</h5>
+                </div>
+
+                <div class="col-md-4">
+                    <p class="text-muted mb-1">Charger Type</p>
+                    <h5 class="fw-bold">{{ selected_order.charger_type }}</h5>
+                </div>
+
+                <div class="col-md-4">
+                    <p class="text-muted mb-1">Customer Address</p>
+                    <h5 class="fw-bold">{{ selected_order.customer_address }}</h5>
+                </div>
+            </div>
+        </div>
+        {% endif %}
+
+        <!-- Team Recommendations -->
+        {% if recommendations %}
+        <div class="content-card mt-4">
+
+            <div class="d-flex flex-wrap justify-content-between align-items-center mb-3 gap-2">
+                <div>
+                    <h4 class="mb-1 fw-bold">Eligible Team Recommendations</h4>
+                    <p class="text-muted mb-0">
+                        Duration prediction model: <span class="badge badge-model">{{ model_name }}</span>
+                    </p>
+                </div>
+
+                <span class="badge badge-rank-1">
+                    {{ recommendations|length }} Eligible Teams
+                </span>
+            </div>
+
+            <p class="text-muted mb-4">
+                Teams are ranked by assignment score. A lower score indicates a higher ranking under the current evaluation rules.
+            </p>
+
+            <div class="table-responsive mb-4">
+                <table class="table table-hover align-middle">
+                    <thead>
+                        <tr>
+                            <th>Rank</th>
+                            <th>Team ID</th>
+                            <th>Base Location</th>
+                            <th>Distance (km)</th>
+                            <th>Pending Jobs</th>
+                            <th>Experience (Years)</th>
+                            <th>Predicted Duration (Hours)</th>
+                            <th>Score</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        {% for team in recommendations %}
+                        <tr>
+                            <td>
+                                {% if forloop.first %}
+                                    <span class="badge badge-rank-1">
+                                        #1 Best Match
+                                    </span>
+                                {% else %}
+                                    <span class="badge badge-rank-other">
+                                        #{{ forloop.counter }}
+                                    </span>
+                                {% endif %}
+                            </td>
+
+                            <td>
+                                <strong style="color: #00ffcc;">{{ team.team_id }}</strong>
+                            </td>
+
+                            <td>{{ team.base }}</td>
+
+                            <td>
+                                {% if team.distance != None %}
+                                    {{ team.distance }}
+                                {% else %}
+                                    Unknown
+                                {% endif %}
+                            </td>
+
+                            <td>{{ team.pending }}</td>
+
+                            <td>{{ team.experience }}</td>
+
+                            <td>
+                                <strong>{{ team.duration }}</strong>
+                            </td>
+
+                            <td>{{ team.score }}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Recommended Team Summary Box -->
+            <div class="alert alert-success mt-4 p-4">
+                <h5 class="alert-heading fw-bold mb-3">🏆 Recommended Team Summary</h5>
+
+                <div class="row g-3 fs-6">
+                    <div class="col-md-4">
+                        <strong>Team ID:</strong> {{ recommendations.0.team_id }}
+                    </div>
+                    <div class="col-md-4">
+                        <strong>Predicted Duration:</strong> {{ recommendations.0.duration }} hours
+                    </div>
+                    <div class="col-md-4">
+                        <strong>Pending Jobs:</strong> {{ recommendations.0.pending }}
+                    </div>
+                </div>
+            </div>
+
+            <!-- Important Notice -->
+            <div class="alert alert-info mb-0 mt-3 p-4">
+                <strong>Important:</strong>
+                This result is an automated recommendation, not a confirmed assignment. Supervisor approval is required. Distances use approximate straight-line calculations, and the duration model is trained on optimization benchmarks.
+            </div>
+
+        </div>
+        {% endif %}
+
+        <!-- Initial How-It-Works Instructions -->
+        {% if not selected_order and not error %}
+        <div class="content-card mt-4">
+            <h5 class="fw-bold mb-3" style="color: #00ffcc;">How Smart Assignment Works</h5>
+
+            <ol class="mb-0">
+                <li>Select a work order from the dropdown list above.</li>
+                <li>The system filters installation teams by availability and charger type compatibility.</li>
+                <li>Teams exceeding maximum pending-job thresholds are excluded.</li>
+                <li>The ML model predicts installation duration for eligible teams based on historic velocity.</li>
+                <li>The system ranks eligible teams and displays the best match recommendation.</li>
+            </ol>
+        </div>
+        {% endif %}
+
+    </main>
+</div>
+</body>
+</html>

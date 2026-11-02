@@ -1,0 +1,6 @@
+Work Order Number,Charger Type,Customer Address,Installation Date,Priority,Notes
+WO-1001,3.2 kW,"Hitech City, Hyderabad, Telangana",2026-11-02,High,Residential installation
+WO-1002,7.2 kW,"Kukatpally, Hyderabad, Telangana",2026-11-03,Medium,Apartment parking
+WO-1003,3.2 kW,"Gachibowli, Hyderabad, Telangana",2026-11-04,Low,Independent house
+WO-1004,11 kW,"Madhapur, Hyderabad, Telangana",2026-11-05,High,Commercial site
+WO-1005,7.2 kW,"LB Nagar, Hyderabad, Telangana",2026-11-06,Medium,Residential installation

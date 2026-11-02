@@ -1,0 +1,6 @@
+team_id,team_name,base_location,charger_types,experience_years,completed_installations,pending_jobs,available
+T01,Team 1,Shivarampally,"3.3KW,7.2KW,7.5KW",3,60,2,True
+T02,Team 2,Attapur,"3.3KW,7.2KW",2,45,1,True
+T03,Team 3,Bachupally,"7.2KW,7.5KW",4,85,3,True
+T04,Team 4,Secunderabad,"3.3KW,7.5KW",3,55,0,True
+T05,Team 5,LB Nagar,"3.3KW,7.2KW,7.5KW",5,110,2,True

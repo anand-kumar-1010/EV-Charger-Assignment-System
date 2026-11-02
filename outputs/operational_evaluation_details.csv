@@ -1,0 +1,16 @@
+Work Order Number,Charger Type,Recommended Team ID,Team Exists,Charger Compatible,Team Available In Dataset,Pending Jobs At Recommendation,Below Workload Limit,Charger-Specific Completed Installs,Distance (km),Predicted Duration (hours),Assignment Status,Eligible Team Count
+1205101,7.5KW,T04,True,True,True,0,True,34,10.27,1.74,Awaiting supervisor approval,4
+1205102,3.3KW,T02,True,True,True,1,True,28,3.1,1.42,Awaiting supervisor approval,4
+1205103,7.2KW,T03,True,True,True,3,True,19,5.77,1.69,Awaiting supervisor approval,4
+1205104,7.5KW,T04,True,True,True,1,True,34,8.39,1.73,Awaiting supervisor approval,4
+1205105,3.3KW,T04,True,True,True,2,True,25,3.34,1.44,Awaiting supervisor approval,4
+1205106,7.2KW,T02,True,True,True,2,True,42,6.37,1.73,Awaiting supervisor approval,4
+1205107,7.5KW,T05,True,True,True,2,True,23,22.49,2.07,Awaiting supervisor approval,4
+1205108,3.3KW,T05,True,True,True,3,True,38,6.72,1.5,Awaiting supervisor approval,4
+1205109,7.2KW,T01,True,True,True,2,True,23,9.34,1.78,Awaiting supervisor approval,4
+1205110,7.5KW,T05,True,True,True,4,True,23,0.0,1.56,Awaiting supervisor approval,4
+1205111,3.3KW,T01,True,True,True,3,True,35,12.78,1.72,Awaiting supervisor approval,3
+1205112,7.2KW,T02,True,True,True,3,True,42,7.91,1.81,Awaiting supervisor approval,3
+1205113,7.5KW,T03,True,True,True,4,True,17,3.89,1.7,Awaiting supervisor approval,3
+1205114,3.3KW,T04,True,True,True,3,True,25,9.48,1.63,Awaiting supervisor approval,3
+1205115,7.2KW,T02,True,True,True,4,True,42,16.81,2.08,Awaiting supervisor approval,2

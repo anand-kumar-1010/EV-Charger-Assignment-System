@@ -1,0 +1,53 @@
+{
+    "total_work_orders": 15,
+    "original_method": {
+        "assigned_work_orders": 15,
+        "assignment_rate_percent": 100.0,
+        "distance": {
+            "known_distance_count": 15,
+            "total_distance_km": 126.66,
+            "average_distance_km": 8.44,
+            "maximum_distance_km": 22.49
+        },
+        "workload": {
+            "minimum_final_jobs": 4,
+            "maximum_final_jobs": 5,
+            "average_final_jobs": 4.6,
+            "workload_standard_deviation": 0.49
+        },
+        "average_charger_specific_experience": 30.0,
+        "teams_exceeding_capacity": 0
+    },
+    "optimized_method": {
+        "assigned_work_orders": 15,
+        "assignment_rate_percent": 100.0,
+        "distance": {
+            "known_distance_count": 15,
+            "total_distance_km": 106.41,
+            "average_distance_km": 7.09,
+            "maximum_distance_km": 16.6
+        },
+        "workload": {
+            "minimum_final_jobs": 4,
+            "maximum_final_jobs": 5,
+            "average_final_jobs": 4.6,
+            "workload_standard_deviation": 0.49
+        },
+        "average_charger_specific_experience": 31.73,
+        "teams_exceeding_capacity": 0
+    },
+    "comparison": {
+        "work_orders_with_changed_team": 6,
+        "work_orders_with_same_team": 9,
+        "distance_saving_km_on_known_pairs": 20.25,
+        "distance_improvement_percent": 15.99,
+        "average_charger_experience_difference": 1.73
+    },
+    "limitations": [
+        "Distances are approximate straight-line estimates.",
+        "The duration model uses synthetic training data.",
+        "Assignment scores from the two methods use different formulas and are not directly comparable.",
+        "Workload is calculated using starting pending jobs plus new assignments.",
+        "This evaluation does not measure real-world assignment accuracy."
+    ]
+}

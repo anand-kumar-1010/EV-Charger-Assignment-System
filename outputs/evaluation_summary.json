@@ -1,0 +1,56 @@
+{
+  "evaluation_type": "Operational checks; not actual assignment accuracy",
+  "total_work_orders": 15,
+  "work_orders_with_recommendation": 15,
+  "work_orders_without_recommendation": 0,
+  "recommendation_rate_percent": 100.0,
+  "checks": {
+    "recommended_team_exists_count": 15,
+    "charger_compatibility_pass_count": 15,
+    "charger_compatibility_checked_count": 15,
+    "team_available_pass_count": 15,
+    "team_availability_checked_count": 15,
+    "workload_limit_pass_count": 15,
+    "workload_limit_checked_count": 15,
+    "workload_limit": 5
+  },
+  "distance_km": {
+    "known_count": 15,
+    "unknown_count": 0,
+    "average": 8.44,
+    "minimum": 0.0,
+    "maximum": 22.49,
+    "note": "Straight-line Haversine distance, not road distance."
+  },
+  "predicted_duration_hours": {
+    "known_count": 15,
+    "average": 1.71,
+    "minimum": 1.42,
+    "maximum": 2.08,
+    "note": "Predictions come from a model trained on synthetic demonstration data."
+  },
+  "eligible_team_count": {
+    "average": 3.6,
+    "minimum": 2
+  },
+  "recommendations_by_team": {
+    "T01": 2,
+    "T02": 4,
+    "T03": 2,
+    "T04": 4,
+    "T05": 3
+  },
+  "work_orders_by_charger_type": {
+    "3.3KW": 5,
+    "7.2KW": 5,
+    "7.5KW": 5
+  },
+  "complexity_unknown_count": 15,
+  "limitations": [
+    "No actual team-selection labels were supplied, so accuracy, precision, recall and F1 are not calculated.",
+    "Availability is checked against the current team CSV; the report does not preserve a timestamped availability history.",
+    "Workload is checked using the pending-job count recorded in the recommendation reason.",
+    "Distances are approximate straight-line distances, not driving distances.",
+    "Duration predictions use synthetic training data and require validation against real installation records."
+  ]
+}

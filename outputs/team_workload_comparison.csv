@@ -1,0 +1,6 @@
+team_id,initial_pending_jobs,original_new_assignments,optimized_new_assignments,original_final_pending,optimized_final_pending,original_capacity_used_percent,optimized_capacity_used_percent,original_within_capacity,optimized_within_capacity
+T01,2,2,2,4,4,80.0,80.0,True,True
+T02,1,4,4,5,5,100.0,100.0,True,True
+T03,3,2,2,5,5,100.0,100.0,True,True
+T04,0,4,4,4,4,80.0,80.0,True,True
+T05,2,3,3,5,5,100.0,100.0,True,True

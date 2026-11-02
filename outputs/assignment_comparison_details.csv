@@ -1,0 +1,16 @@
+work_order_number,case_number,customer_address,charger_type,original_team_id,original_charger_experience,original_distance_km,original_predicted_duration_hours,optimized_team_id,optimized_charger_experience,optimized_distance_km,optimized_assignment_score,team_changed,distance_difference_km,distance_improvement_km,charger_experience_difference
+1205101,2436101,"Kukatpally, Hyderabad",7.5KW,T04,34,10.27,1.74,T04,34,12.12,1.471,False,1.8499999999999996,-1.8499999999999996,0
+1205102,2436102,"Mehdipatnam, Hyderabad",3.3KW,T02,28,3.1,1.42,T01,35,8.09,10.904,True,4.99,-4.99,7
+1205103,2436103,"Miyapur, Hyderabad",7.2KW,T03,19,5.77,1.69,T03,19,5.69,14.767,False,-0.07999999999999918,0.07999999999999918,0
+1205104,2436104,"Dilsukhnagar, Hyderabad",7.5KW,T04,34,8.39,1.73,T05,23,3.88,6.178,True,-4.510000000000001,4.510000000000001,-11
+1205105,2436105,"Begumpet, Hyderabad",3.3KW,T04,25,3.34,1.44,T04,25,3.34,-3.347,False,0.0,0.0,0
+1205106,2436106,"Manikonda, Hyderabad",7.2KW,T02,42,6.37,1.73,T02,42,5.96,4.573,False,-0.41000000000000014,0.41000000000000014,0
+1205107,2436107,"Kompally, Hyderabad",7.5KW,T05,23,22.49,2.07,T04,34,11.17,0.899,True,-11.319999999999999,11.319999999999999,11
+1205108,2436108,"Uppal, Hyderabad",3.3KW,T05,38,6.72,1.5,T04,25,7.52,-0.839,True,0.7999999999999998,-0.7999999999999998,-13
+1205109,2436109,"Tolichowki, Hyderabad",7.2KW,T01,23,9.34,1.78,T02,42,3.75,3.252,True,-5.59,5.59,19
+1205110,2436110,"LB Nagar, Hyderabad",7.5KW,T05,23,0.0,1.56,T05,23,0.0,3.85,False,0.0,0.0,0
+1205111,2436111,"Shamshabad, Hyderabad",3.3KW,T01,35,12.78,1.72,T01,35,13.74,14.297,False,0.9600000000000009,-0.9600000000000009,0
+1205112,2436112,"Ameerpet, Hyderabad",7.2KW,T02,42,7.91,1.81,T02,42,7.86,5.716,False,-0.04999999999999982,0.04999999999999982,0
+1205113,2436113,"Nizampet, Hyderabad",7.5KW,T03,17,3.89,1.7,T03,17,3.99,13.843,False,0.10000000000000009,-0.10000000000000009,0
+1205114,2436114,"Kothapet, Hyderabad",3.3KW,T04,25,9.48,1.63,T05,38,2.7,4.721,True,-6.78,6.78,13
+1205115,2436115,"Alwal, Hyderabad",7.2KW,T02,42,16.81,2.08,T02,42,16.6,10.959,False,-0.2099999999999973,0.2099999999999973,0

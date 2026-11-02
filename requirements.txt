@@ -1,0 +1,11 @@
+Django==6.1.2
+
+pandas
+numpy
+scikit-learn
+joblib
+
+openpyxl
+xlrd
+
+matplotlib

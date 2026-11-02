@@ -1,0 +1,5 @@
+Model,CV_MAE_mean_hours,CV_MAE_std_hours,CV_RMSE_mean_hours,CV_RMSE_std_hours,CV_R2_mean,CV_R2_std
+Linear Regression,0.1613,0.0095,0.2023,0.0093,0.8007,0.0214
+Gradient Boosting Regressor,0.1739,0.0091,0.2181,0.0121,0.7693,0.0191
+Random Forest Regressor,0.1818,0.0056,0.227,0.0092,0.7501,0.0133
+Decision Tree Regressor,0.2127,0.0066,0.2635,0.0085,0.6633,0.0123

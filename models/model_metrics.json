@@ -1,0 +1,84 @@
+{
+  "selected_model": "Linear Regression",
+  "selection_criterion": "Lowest mean 5-fold CV RMSE on training data",
+  "dataset": "historical_installations_synthetic.csv",
+  "total_records": 600,
+  "training_records": 480,
+  "testing_records": 120,
+  "cv_folds": 5,
+  "cross_validation_results": {
+    "Linear Regression": {
+      "CV_MAE_mean_hours": 0.1613,
+      "CV_MAE_std_hours": 0.0095,
+      "CV_RMSE_mean_hours": 0.2023,
+      "CV_RMSE_std_hours": 0.0093,
+      "CV_R2_mean": 0.8007,
+      "CV_R2_std": 0.0214
+    },
+    "Decision Tree Regressor": {
+      "CV_MAE_mean_hours": 0.2127,
+      "CV_MAE_std_hours": 0.0066,
+      "CV_RMSE_mean_hours": 0.2635,
+      "CV_RMSE_std_hours": 0.0085,
+      "CV_R2_mean": 0.6633,
+      "CV_R2_std": 0.0123
+    },
+    "Gradient Boosting Regressor": {
+      "CV_MAE_mean_hours": 0.1739,
+      "CV_MAE_std_hours": 0.0091,
+      "CV_RMSE_mean_hours": 0.2181,
+      "CV_RMSE_std_hours": 0.0121,
+      "CV_R2_mean": 0.7693,
+      "CV_R2_std": 0.0191
+    },
+    "Random Forest Regressor": {
+      "CV_MAE_mean_hours": 0.1818,
+      "CV_MAE_std_hours": 0.0056,
+      "CV_RMSE_mean_hours": 0.227,
+      "CV_RMSE_std_hours": 0.0092,
+      "CV_R2_mean": 0.7501,
+      "CV_R2_std": 0.0133
+    }
+  },
+  "test_results": {
+    "MAE_hours": 0.1606,
+    "RMSE_hours": 0.1979,
+    "R2": 0.7999
+  },
+  "feature_columns": [
+    "charger_kw",
+    "complexity",
+    "distance_km",
+    "team_experience_years",
+    "team_completed_installations",
+    "team_pending_jobs"
+  ],
+  "permutation_feature_importance": {
+    "complexity": {
+      "mean": 0.206456,
+      "std": 0.012216
+    },
+    "distance_km": {
+      "mean": 0.169822,
+      "std": 0.015801
+    },
+    "team_pending_jobs": {
+      "mean": 0.016379,
+      "std": 0.003534
+    },
+    "team_experience_years": {
+      "mean": 0.016246,
+      "std": 0.005161
+    },
+    "charger_kw": {
+      "mean": 0.016079,
+      "std": 0.008738
+    },
+    "team_completed_installations": {
+      "mean": -4.8e-05,
+      "std": 2.1e-05
+    }
+  },
+  "sklearn_version": "1.9.1",
+  "data_note": "The historical dataset is synthetic demonstration data. These metrics do not establish real-world performance."
+}

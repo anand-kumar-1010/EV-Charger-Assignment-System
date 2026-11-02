@@ -1,0 +1,16 @@
+work_order_number,case_number,customer_address,charger_type,assigned_team_id,assigned_team_name,distance_km,charger_specific_installations,assignment_score,status
+1205101,2436101,"Kukatpally, Hyderabad",7.5KW,T04,Team 4,12.12,34,1.471,Pending supervisor approval
+1205102,2436102,"Mehdipatnam, Hyderabad",3.3KW,T01,Team 1,8.09,35,10.904,Pending supervisor approval
+1205103,2436103,"Miyapur, Hyderabad",7.2KW,T03,Team 3,5.69,19,14.767,Pending supervisor approval
+1205104,2436104,"Dilsukhnagar, Hyderabad",7.5KW,T05,Team 5,3.88,23,6.178,Pending supervisor approval
+1205105,2436105,"Begumpet, Hyderabad",3.3KW,T04,Team 4,3.34,25,-3.347,Pending supervisor approval
+1205106,2436106,"Manikonda, Hyderabad",7.2KW,T02,Team 2,5.96,42,4.573,Pending supervisor approval
+1205107,2436107,"Kompally, Hyderabad",7.5KW,T04,Team 4,11.17,34,0.899,Pending supervisor approval
+1205108,2436108,"Uppal, Hyderabad",3.3KW,T04,Team 4,7.52,25,-0.839,Pending supervisor approval
+1205109,2436109,"Tolichowki, Hyderabad",7.2KW,T02,Team 2,3.75,42,3.252,Pending supervisor approval
+1205110,2436110,"LB Nagar, Hyderabad",7.5KW,T05,Team 5,0.0,23,3.85,Pending supervisor approval
+1205111,2436111,"Shamshabad, Hyderabad",3.3KW,T01,Team 1,13.74,35,14.297,Pending supervisor approval
+1205112,2436112,"Ameerpet, Hyderabad",7.2KW,T02,Team 2,7.86,42,5.716,Pending supervisor approval
+1205113,2436113,"Nizampet, Hyderabad",7.5KW,T03,Team 3,3.99,17,13.843,Pending supervisor approval
+1205114,2436114,"Kothapet, Hyderabad",3.3KW,T05,Team 5,2.7,38,4.721,Pending supervisor approval
+1205115,2436115,"Alwal, Hyderabad",7.2KW,T02,Team 2,16.6,42,10.959,Pending supervisor approval
